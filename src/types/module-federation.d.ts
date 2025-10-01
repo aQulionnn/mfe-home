@@ -1,5 +1,5 @@
-declare module "auth/Auth" {
-    import { ComponentType } from "react"
-    const Auth: ComponentType<unknown>
-    export default Auth
+declare module 'auth/Auth' {
+    import type { Container } from 'react-dom/client';
+
+    export function mount(rootElement: Container): void;
 }

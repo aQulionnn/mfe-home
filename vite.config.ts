@@ -1,24 +1,26 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import vue from '@vitejs/plugin-vue'
 import { federation } from "@module-federation/vite";
 
 // https://vite.dev/config/
-
 export default defineConfig({
     plugins: [
-        react(),
+        vue(),
+
         federation({
-            name: "mfe-home",
+            name: "home",
             remotes: {
                 auth: {
                     name: "auth",
                     entry: "https://bek-mfe-auth.netlify.app/remoteEntry.js",
                     type: "module",
                 },
-            },
-            shared: ["react", "react-dom"]
+            }
         })
     ],
+    server: {
+        port: 5174
+    },
     build: {
         target: "esnext"
     }
