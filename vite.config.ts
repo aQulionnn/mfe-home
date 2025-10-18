@@ -12,9 +12,14 @@ export default defineConfig({
             remotes: {
                 auth: {
                     name: "auth",
-                    entry: "https://bek-mfe-auth.netlify.app/remoteEntry.js",
+                    entry: "https://artique-mfe-auth.netlify.app/remoteEntry.js",
                     type: "module",
                 },
+                gallery: {
+                    name: "gallery",
+                    entry: "https://artique-mfe-gallery.netlify.app/remoteEntry.js",
+                    type: "module",
+                }
             }
         })
     ],
@@ -22,6 +27,7 @@ export default defineConfig({
         port: 5174
     },
     build: {
-        target: "esnext"
+        target: "esnext",
+        cssCodeSplit: false
     }
 })

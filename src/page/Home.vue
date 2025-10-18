@@ -2,18 +2,18 @@
     import {defineComponent} from "vue";
     import Layout from "../components/Layout.vue";
     import AuthWrapper from "../components/AuthWrapper.vue";
+    import GalleryWrapper from "../components/GalleryWrapper.vue";
 
     export default defineComponent({
-        components: {AuthWrapper, Layout}
+        components: {GalleryWrapper, AuthWrapper, Layout}
     })
 </script>
 
 <template>
     <Layout>
         <main class='main' />
-    </Layout>
-    <Layout>
         <AuthWrapper />
+        <GalleryWrapper />
     </Layout>
 </template>
 
