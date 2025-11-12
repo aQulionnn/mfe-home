@@ -1,24 +1,24 @@
-<script lang="ts">
-    import {defineComponent} from "vue";
+<script setup lang="ts" type="module">
     import Layout from "../components/Layout.vue";
-    import AuthWrapper from "../components/AuthWrapper.vue";
-    import GalleryWrapper from "../components/GalleryWrapper.vue";
+    import { ref } from 'vue'
+    import "@aqulionnn/artique-ui-lib"
 
-    export default defineComponent({
-        components: {GalleryWrapper, AuthWrapper, Layout}
-    })
+    const name = ref('')
+
 </script>
 
 <template>
     <Layout>
         <main class='main' />
-        <AuthWrapper />
-        <GalleryWrapper />
+        <app-input label="Name"
+                   .value="name"
+                   @change="e => name = e.target.value"></app-input>
     </Layout>
 </template>
 
 <style scoped>
     .main {
+        background: #000;
         width: 100dvw;
         height: 100dvh;
 

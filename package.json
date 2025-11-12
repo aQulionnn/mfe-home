@@ -10,8 +10,8 @@
     "vmf": "cross-env NODE_OPTIONS=--experimental-vm-modules vite --port=5174"
   },
   "dependencies": {
+    "@aqulionnn/artique-ui-lib": "^1.0.0",
     "@module-federation/vite": "^1.8.1",
-    "@types/vue-router": "^2.0.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "vue": "^3.5.21",

@@ -11,6 +11,7 @@
 
 <style scoped>
     .layout {
+        background: #000;
         max-width: 100dvw;
         min-height: 100dvh;
         display: grid;

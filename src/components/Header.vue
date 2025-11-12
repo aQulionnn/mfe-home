@@ -3,6 +3,7 @@
         <nav class="nav">
             <router-link to="/" class="nav-item">HOME</router-link>
             <router-link to="/auth" class="nav-item">AUTH</router-link>
+            <router-link to="/gallery" class="nav-item">GALLERY</router-link>
         </nav>
     </header>
 </template>
